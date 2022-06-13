@@ -1,0 +1,25 @@
+.top-nav {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 253px;
+  width: calc(100% - 250px);
+  height: 50px;
+  justify-content: flex-end;
+  border: 1px solid red;
+  align-items: center;
+  flex-direction: row;
+  background-color: #393433;
+}
+
+.top-nav button {
+  margin-right: 25px;
+  font-size: 16px;
+  font-weight: bold;
+  border: 0;
+  color: goldenrod;
+  width: auto;
+  height: 35px;
+  border-radius: 5px;
+  background-color: #1b1a1aa2;
+}
