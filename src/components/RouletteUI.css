@@ -17,9 +17,8 @@
 .roll-container {
   display: flex;
   border-radius: 15px;
-  align-items: center;
+  position: relative;
   overflow: hidden;
-  flex-direction: row;
   width: 75%;
   height: 75px;
   padding-top: 10px;
@@ -29,18 +28,15 @@
   box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
     rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
-
-.red {
-  background-color: rgba(255, 0, 0, 0.7);
-}
-.black {
-  background-color: rgba(0, 0, 0, 0.7);
-}
-.green {
-  background-color: rgba(10, 201, 10, 0.74);
+.roll-wrapper {
+  height: 75px;
+  display: flex;
+  position: absolute;
+  left: -200px;
+  flex-direction: row;
 }
 
-.roll-container div{
+.roll-container div {
   color: white;
   text-align: right;
   padding-right: 5px;
@@ -48,8 +44,19 @@
   min-height: 65px;
   margin: 2px;
 }
+.red {
+  background-color: #ff0000b3;
+}
+.black {
+  background-color: #000000b3;
+}
+.green {
+  background-color: #0ac90abd;
+}
 
-.amount-container {
+
+
+.bet-input-container {
   display: flex;
   align-items: center;
   flex-direction: row;
@@ -63,14 +70,14 @@
     rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
 
-.amount-container input {
+.bet-input-container input {
   background-color: transparent;
   border: 0;
   color: white;
   font-size: medium;
 }
 
-.amount-container button {
+.bet-input-container button {
   height: 25px;
   width: 60px;
   margin-right: 5px;
@@ -97,11 +104,10 @@
   justify-content: space-evenly;
   margin: 20px;
 }
-.show-bets-container .bet-list{
+.show-bets-container .bet-list {
   display: flex;
   flex-direction: column;
   width: 25%;
-
 }
 
 .bets-header {
@@ -112,7 +118,9 @@
   font-weight: bold;
 }
 
-.place-bet-container .bet-red, .bet-green, .bet-black{
+.place-bet-container .bet-red,
+.bet-green,
+.bet-black {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -134,15 +142,15 @@
   border: 0;
   font-weight: bold;
 }
-.bet-green button{
+.bet-green button {
   background-color: rgba(20, 192, 20, 0.856);
   box-shadow: 0px 15px 20px rgba(30, 255, 0, 0.4);
 }
-.bet-red button{
+.bet-red button {
   background-color: red;
   box-shadow: 0px 15px 20px rgba(253, 11, 2, 0.5);
 }
-.bet-black button{
+.bet-black button {
   background-color: rgb(27, 27, 27);
   box-shadow: 0px 15px 20px rgb(22, 22, 22);
 }
@@ -161,7 +169,7 @@ button {
 }
 button:hover {
   -webkit-transform: translateY(-2px);
-	transform: translateY(-2px);
+  transform: translateY(-2px);
 }
 input:focus {
   outline: none;
