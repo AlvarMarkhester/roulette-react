@@ -2,14 +2,12 @@
   display: flex;
   position: fixed;
   top: 0;
-  left: 253px;
-  width: calc(100% - 250px);
+  width: 100%;
   height: 50px;
   justify-content: flex-end;
-  border: 1px solid red;
   align-items: center;
   flex-direction: row;
-  background-color: #393433;
+  background-color: rgb(49, 54, 65);
 }
 
 .top-nav button {

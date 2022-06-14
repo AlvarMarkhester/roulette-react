@@ -4,10 +4,10 @@
   flex-direction: column;
   align-items: center;
   border-radius: 10px;
-  padding-top: 50px;
-  margin-left: 400px;
-  margin-right: 150px;
+  padding-top: 100px;
+  margin: 200px;
   margin-top: 100px;
+  margin-bottom: 0;
   height: 80vh;
   background: rgba(8, 4, 4, 0.212);
   border-radius: 8px;
@@ -17,22 +17,44 @@
 .roll-container {
   display: flex;
   border-radius: 15px;
-  justify-content: center;
+  align-items: center;
+  overflow: hidden;
   flex-direction: row;
   width: 75%;
   height: 75px;
-  padding: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   margin: 10px;
   background-color: rgba(48, 48, 48, 0.555);
   box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
     rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
+
+.red {
+  background-color: rgba(255, 0, 0, 0.7);
+}
+.black {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.green {
+  background-color: rgba(10, 201, 10, 0.74);
+}
+
+.roll-container div{
+  color: white;
+  text-align: right;
+  padding-right: 5px;
+  min-width: 60px;
+  min-height: 65px;
+  margin: 2px;
+}
+
 .amount-container {
   display: flex;
-  justify-content: center;
   align-items: center;
   flex-direction: row;
-  width: 45%;
+  justify-content: flex-end;
+  width: 55%;
   border-radius: 5px;
   background-color: rgba(0, 0, 0, 0.322);
   height: 45px;
@@ -66,9 +88,31 @@
   width: 75%;
   justify-content: space-evenly;
   margin: 20px;
+  margin-bottom: 5px;
+}
+.show-bets-container {
+  display: flex;
+  flex-direction: row;
+  width: 75%;
+  justify-content: space-evenly;
+  margin: 20px;
+}
+.show-bets-container .bet-list{
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+
 }
 
-.place-bet-container div {
+.bets-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: small;
+  font-weight: bold;
+}
+
+.place-bet-container .bet-red, .bet-green, .bet-black{
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -92,16 +136,33 @@
 }
 .bet-green button{
   background-color: rgba(20, 192, 20, 0.856);
-  box-shadow: 0px 15px 20px rgba(30, 255, 0, 0.479);
+  box-shadow: 0px 15px 20px rgba(30, 255, 0, 0.4);
 }
 .bet-red button{
   background-color: red;
-  box-shadow: 0px 15px 20px rgba(235, 18, 10, 0.541);
+  box-shadow: 0px 15px 20px rgba(253, 11, 2, 0.5);
 }
 .bet-black button{
-  background-color: rgb(43, 42, 42);
-  box-shadow: 0px 15px 20px rgba(39, 39, 39, 0.795);
+  background-color: rgb(27, 27, 27);
+  box-shadow: 0px 15px 20px rgb(22, 22, 22);
 }
-*:focus {
+.input-div {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  left: -100px;
+}
+.helper-bet-text {
+  font-size: xx-small;
+  color: gray;
+}
+button {
+  transition-duration: 0.4s;
+}
+button:hover {
+  -webkit-transform: translateY(-2px);
+	transform: translateY(-2px);
+}
+input:focus {
   outline: none;
 }

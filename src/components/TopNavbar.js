@@ -1,10 +1,10 @@
 import React from "react";
 import './TopNavbar.css'
 
-function TopNavbar() {
+function TopNavbar(props) {
   return (
     <div className="top-nav">
-        <button>Balance: 0.00</button>
+        <button>Coins: {props.balance}</button>
         <button>Profile</button>
     </div>
   );
