@@ -20,6 +20,7 @@ function RouletteUI(props) {
     <div className="roulette-container">
       <Rollwheel />
       <BetInput
+        balance={props.balance}
         currentBetInput={currentBetInput}
         setCurrentBetInput={setCurrentBetInput}
       />

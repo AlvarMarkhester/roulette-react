@@ -26,20 +26,27 @@ const INITIAL_LAYOUT = [
 
 function Rollwheel() {
   const [numberLayout, setNumberLayout] = useState(INITIAL_LAYOUT);
+  const [isRolling, setIsRolling] = useState(false);
+
+  function handleClick() {
+    setIsRolling(!isRolling);
+  }
+
   return (
-    <>
-      <button>Roll</button>
+    <React.Fragment>
+      <button onClick={handleClick}>Roll</button>
       <div className="roll-container">
-        <div className="roll-wrapper animate">
+        <div className={`roll-wrapper ${isRolling ? "animate" : ""}`}>
           {numberLayout.map((value) => {
-            return <div style={{ background: value[0] }}>{value[1]}</div>;
-          })}
-          {numberLayout.map((value) => {
-            return <div style={{ background: value[0] }}>{value[1]}</div>;
+            return (
+              <div key={value[1]} style={{ background: value[0] }}>
+                {value[1]}
+              </div>
+            );
           })}
         </div>
       </div>
-    </>
+    </React.Fragment>
   );
 }
 
